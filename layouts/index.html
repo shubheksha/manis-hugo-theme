@@ -8,15 +8,7 @@
 	<section>
 		<h4>{{ T "latestPost" }}</h4>
 		<ul class="no-bullet">
-			{{- range (first $latestcount (where .Pages "Section" "blog")) -}}
-			{{ partial "li" . }}
-			{{- end -}}
-		</ul>
-	</section>
-	<section>
-		<h4>{{ T "latestWork" }}</h4>
-		<ul class="no-bullet">
-			{{- range (first $latestcount (where .Pages "Section" "work")) -}}
+			{{- range (first $latestcount (where .Pages "Section" "papers")) -}}
 			{{ partial "li" . }}
 			{{- end -}}
 		</ul>
